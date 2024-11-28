@@ -1,5 +1,6 @@
 package com.example.tp4pochet;
 
+import android.content.ActivityNotFoundException;
 import android.os.Bundle;
 
 import android.widget.Button;
@@ -35,12 +36,16 @@ public class GeoActivity extends AppCompatActivity {
                 Toast.makeText(this, "Veuillez saisir une latitude", Toast.LENGTH_SHORT).show();
             } else if (lng.length() == 0) {
                 Toast.makeText(this, "Veuillez saisir une longitude", Toast.LENGTH_SHORT).show();
-            }else if(lat.matches("/^[0-9]+(\\\\.[0-9]+)?$") && lng.matches("/^[0-9]+(\\\\.[0-9]+)?$")){
+            }else if(lat.matches("^([+-]?\\d*\\.?\\d*)$") && lng.matches("^([+-]?\\d*\\.?\\d*)$")){
                 Intent intentionGeo = new Intent(Intent.ACTION_VIEW);
                 intentionGeo.setAction(Intent.ACTION_VIEW);
                 Uri uriGeo = Uri.parse("geo:" + lat + "," + lng);
                 intentionGeo.setData(uriGeo);
-                startActivity(intentionGeo);
+                try {
+                    startActivity(intentionGeo);
+                }catch (ActivityNotFoundException e){
+                    System.out.println(e.getMessage());
+                }
             } else{
                 Toast.makeText(this, "Les coordonnées saisies ne sont pas valides", Toast.LENGTH_SHORT).show();
             }

@@ -1,5 +1,6 @@
 package com.example.tp4pochet;
 
+import android.content.ActivityNotFoundException;
 import android.os.Bundle;
 
 import android.widget.Button;
@@ -36,11 +37,19 @@ public class CallActivity extends AppCompatActivity {
             if (phoneNumber.length() == 0) {
                 Toast.makeText(this, "Veuillez saisir un numéro", Toast.LENGTH_SHORT).show();
             }else if(phoneNumber.matches("^[0-9]*$")){
-                Intent intentionCall = new Intent(Intent.ACTION_CALL);
-                intentionCall.setAction(Intent.ACTION_CALL);
+                Intent intentionCall = new Intent(Intent.ACTION_DIAL);
+                intentionCall.setAction(Intent.ACTION_DIAL);
+                Toast.makeText(this, phoneNumber, Toast.LENGTH_SHORT).show();
                 Uri uriCall = Uri.parse("tel:" + phoneNumber);
                 intentionCall.setData(uriCall);
-                startActivity(intentionCall);
+                try {
+                    startActivity(intentionCall);
+
+                }catch(ActivityNotFoundException e){
+                    System.out.println(e.getMessage());
+                }
+
+
             } else{
                 Toast.makeText(this, "Le numéro saisi n'est pas valide", Toast.LENGTH_SHORT).show();
             };

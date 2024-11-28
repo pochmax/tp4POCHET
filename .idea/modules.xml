@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/tp4POCHET.iml" filepath="$PROJECT_DIR$/.idea/tp4POCHET.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/tp4POCHET.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/tp4POCHET.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/tp4POCHET.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/tp4POCHET.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/tp4POCHET.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/tp4POCHET.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/tp4POCHET.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/tp4POCHET.app.unitTest.iml" />
     </modules>
   </component>
 </project>

@@ -2,6 +2,7 @@ package com.example.tp4pochet;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ActivityNotFoundException;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -40,6 +41,11 @@ public class SmsMmsActivity extends AppCompatActivity {
                 Uri uriSms = Uri.parse("sms:" + phoneNumber);
                 intentionSms.putExtra("sms_body", message);
                 intentionSms.setData(uriSms);
+                try {
+                    startActivity(intentionSms);
+                }catch (ActivityNotFoundException e){
+                    System.out.println(e.getMessage());
+                }
             } else{
                 Toast.makeText(this, "Le numéro saisi n'est pas valide", Toast.LENGTH_SHORT).show();
             }

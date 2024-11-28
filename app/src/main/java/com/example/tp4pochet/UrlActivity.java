@@ -1,5 +1,6 @@
 package com.example.tp4pochet;
 
+import android.content.ActivityNotFoundException;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -34,6 +35,11 @@ public class UrlActivity extends AppCompatActivity {
                 intentionWeb.setAction(Intent.ACTION_VIEW);
                 Uri uriWeb = Uri.parse(url);
                 intentionWeb.setData(uriWeb);
+                try {
+                    startActivity(intentionWeb);
+                }catch (ActivityNotFoundException e){
+                    System.out.println(e.getMessage());
+                }
                 startActivity(intentionWeb);
             }else {
                 Toast.makeText(this, "L'url saisi n'est pas valide", Toast.LENGTH_SHORT).show();
