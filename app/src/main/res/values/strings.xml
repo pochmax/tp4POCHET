@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Intentions Implicites</string>
+    <string name="call">APPELER</string>
+    <string name="sms">SMS</string>
+    <string name="mms">MMS</string>
+    <string name="web">WEB</string>
+    <string name="geo">GEO</string>
+    <string name="call_page">Saisie Téléphone</string>
+    <string name="cancel">ANNULER</string>
+    <string name="ok">VALIDER</string>
+    <string name="phone">Numéro</string>
+    <string name="message">Message</string>
+    <string name="message_page">Saisie d un message</string>
+    <string name="geo_page">Saisie Coordonées</string>
+    <string name="phone_number">Numéro</string>
+    <string name="lat">Latitude</string>
+    <string name="lng">Longitude</string>
+    <string name="url">URL</string>
+    <string name="url_page">Saisie URL</string>
+    <string name="phone_hint">Saisir un numéro</string>
+    <string name="message_hint">Saisir un message</string>
+    <string name="lat_hint">Saisir une latitude</string>
+    <string name="lng_hint">Saisir une longitude</string>
+    <string name="url_hint">Saisir une URL</string>
+
+</resources>
